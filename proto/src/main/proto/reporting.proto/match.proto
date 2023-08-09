@@ -1,0 +1,23 @@
+syntax = "proto3";
+package reporting.proto;
+
+message Match {
+  Possession possession = 1;
+  int32 frame = 2;
+  repeated Data data = 3;
+  string period = 4;
+  string time = 5;
+}
+
+message Possession {
+  string trackableObject = 1;
+  string group = 2;
+}
+
+message Data {
+  double y = 1;
+  double x = 2;
+  int32 trackableObject = 3;
+  int32 trackId = 4;
+}
+
