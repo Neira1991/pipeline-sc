@@ -10,5 +10,6 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.4.0'
 }
 
+
 rootProject.name = 'reporting'
-include('app', 'proto', 'utilities')
+include('pipeline', 'app', 'proto', 'utilities')

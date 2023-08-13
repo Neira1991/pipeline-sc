@@ -1,0 +1,20 @@
+plugins {
+    id 'reporting.java-application-conventions'
+}
+
+dependencies {
+
+    implementation project(':utilities')
+    implementation project(':proto')
+    implementation 'com.google.cloud:google-cloud-pubsub:1.120.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+    implementation 'io.grpc:grpc-protobuf:1.57.1'
+    // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java-util
+    implementation group: 'com.google.protobuf', name: 'protobuf-java-util', version: '3.24.0'
+
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+mainClassName = 'reporting.pipeline.Main'
+
